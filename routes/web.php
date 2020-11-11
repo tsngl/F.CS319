@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\CompetitionController;
 
 
 /*
@@ -15,10 +16,10 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CompetitionController::class, 'index'])->name('competition.index');
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('main/dashboard');
 })->name('dashboard');

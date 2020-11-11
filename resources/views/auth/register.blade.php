@@ -6,7 +6,7 @@
 
         <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="/register"">
+        <form method="POST" action="/register">
             @csrf
 
             <div class="mt-4 form-group">
@@ -18,7 +18,7 @@
                 <x-jet-label for="fname" value="Нэр" />
                 <x-jet-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus autocomplete="fname" />
             </div>
-
+            
             <div class="mt-4">
                 <x-jet-label for="register_number" value="Регистерийн дугаар" />
                 <x-jet-input id="register_number" class="block mt-1 w-full" type="text" name="register_number" :value="old('register_number')" required autofocus autocomplete="register_number" placeholder="AA********"/>
